@@ -24,26 +24,32 @@ function App(){
     setMemory([])
   }
 
+  let incrementValues = [1, 10, 100, 1000];
+
+  let addButtonList = incrementValues
+    .map((value, index) => (
+      <ChangeButton key={index} change={value} onClickFunction={changeCount} />
+    ));
+
+  let substractButtonList = incrementValues
+    .map((value, index) => (
+      <ChangeButton key={index} change={-value} onClickFunction={changeCount} />
+    ));
+
   return(
     <div>
       <div className="bg-white p-4 rounded lg">
         <div className="text-center mt-4">
           <p className="text-gray-600 font-bold">Add</p>
         </div>
-        <div className="flex space-x-1 justify-center">
-          <ChangeButton change={1} onClickFunction={changeCount} />
-          <ChangeButton change={10} onClickFunction={changeCount} />
-          <ChangeButton change={100} onClickFunction={changeCount} />
-          <ChangeButton change={1000} onClickFunction={changeCount} />
+        <div className="flex flex-wrap space-x-1 justify-center">
+          {addButtonList}
         </div>
         <div className="text-center mt-4">
           <p className="text-gray-600 font-bold">Substract</p>
         </div>
         <div className="flex flex-wrap space-x-1 justify-center">
-          <ChangeButton change={-1} onClickFunction={changeCount} />
-          <ChangeButton change={-10} onClickFunction={changeCount} />
-          <ChangeButton change={-100} onClickFunction={changeCount} />
-          <ChangeButton change={-1000} onClickFunction={changeCount} />
+          {substractButtonList}
         </div>
       </div>
       <div className="bg-white shadow text-center mt-1">
@@ -54,7 +60,7 @@ function App(){
         </div>
         <div className="mt-2">
           <h1 className="text-xl text-gray-600 font-bold">
-            Memory: <span>{memory.toString()}</span>
+            {memory.length > 0 ? `Memory: ${memory.toString()}` : 'No saved calculations'}
           </h1>
         </div>
       </div>
