@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Button from './components/Button';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function App(){
+  const [count, setCount] = useState(0)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  const incrementCount = increment => {
+    setCount(count + increment)
+  }
+
+  return(
+    <div className="App">
+      <Button increment={1} onClickFunction={incrementCount} />
+      <Button increment={10} onClickFunction={incrementCount} />
+      <Button increment={100} onClickFunction={incrementCount} />
+      <Button increment={1000} onClickFunction={incrementCount} />
+      <span>{count}</span>
+    </div>
+  )
+}
+
+const rootElement = document.getElementById("root")
+ReactDOM.render(<App />, rootElement)
