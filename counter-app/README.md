@@ -1,3 +1,19 @@
+# Summary
+
+In this first project we’ll build a very simple example of a counter.
+
+We are going to have a simple web page with 4 buttons, and a place where we show the count.
+
+The count starts at zero, and the buttons we’ll add will increment the count by 1, 10, 100, 1000 depending on which button is pressed.
+
+We’re going to associate one of those values to a button, and we will show it in the button text.
+
+# Challenges
+
+- Add a “reset” button to restore the count to zero
+- Add a set of buttons to decrement the count
+- Add another button that saves the result of the count to a list of results. This way the page can serve as a sort of calculator that memorizes the previous calculations.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
