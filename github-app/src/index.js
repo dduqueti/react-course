@@ -11,10 +11,15 @@ const App = () => {
     setCards(cards.concat(cardInfo))
   }
 
+  const handleRemove = id => {
+    const newCards = cards.filter((card) => card.id !== id)
+    setCards(newCards)
+  }
+
   return(
-    <div>
+    <div className="p-4">
       <Form onSubmit={addNewCard} />
-      <CardList cards={cards} />
+      <CardList cards={cards} onRemove={handleRemove} />
     </div>
   )
 }

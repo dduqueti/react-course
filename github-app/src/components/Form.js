@@ -8,6 +8,7 @@ const Form = props => {
 		event.preventDefault();
 
 		axios.get(`https://api.github.com/users/${username}`).then(response => {
+			console.log(response.data)
 			props.onSubmit(response.data)
 			setUsername('')
 		})
@@ -22,7 +23,7 @@ const Form = props => {
 				placeholder="Github Username"
 				required
 			/>
-			<button type="submit">Add card</button>
+			<button className="btn" type="submit">Add card</button>
 		</form>
   )
 }
