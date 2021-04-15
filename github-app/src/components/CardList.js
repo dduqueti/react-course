@@ -1,10 +1,10 @@
 import React from 'react'
-import React from './Card.js'
+import Card from './Card.js'
 
-const CardList = props => {
+const CardList = props => (
   <div>
-    { props.cards.map(card => (<Card {...card} />)) }
+    { props.cards.map((card, index) => (<Card key={index} {...card} />)) }
   </div>
-}
+)
 
 export default CardList
