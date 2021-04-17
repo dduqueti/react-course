@@ -1,0 +1,12 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply text-white px-3 py-1 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-gray-600;
+}
+
+.btn-delete {
+  @apply text-xs uppercase font-semibold px-1 py-1 bg-red-400 hover:bg-red-500;
+}
