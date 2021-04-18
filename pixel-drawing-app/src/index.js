@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Canvas from './components/Canvas'
 
 const App = () => {
   return(
-    <div>
-      Hello Pixel Art App
+    <div className="App">
+      <Canvas />
     </div>
   )
 }

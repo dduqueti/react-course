@@ -1,12 +1,36 @@
-/* ./src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-.btn {
-  @apply text-white px-3 py-1 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 bg-gray-600;
+.white {
+  background-color: white;
 }
 
-.btn-delete {
-  @apply text-xs uppercase font-semibold px-1 py-1 bg-red-400 hover:bg-red-500;
+.lightblue {
+  background-color: rgb(0, 188, 212);
+}
+
+.blue {
+  background-color: rgb(3, 169, 244);
+}
+
+.darkblue {
+  background-color: rgb(33, 150, 243);
+}
+
+.pixel {
+  width: 30px;
+  height: 30px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+}
+
+.App {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.canvas {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
 }
