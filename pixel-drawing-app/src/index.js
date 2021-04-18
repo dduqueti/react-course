@@ -13,7 +13,7 @@ const App = () => {
         currentColor={color}
         setColor={color => setColor(color)}
       />
-      <Canvas />
+      <Canvas currentColor={color} />
     </div>
   )
 }
