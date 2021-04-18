@@ -13,8 +13,10 @@ const Canvas = () => {
 				row.map((_, colIndex) => {
 					return(
 						<Pixel
+              onClick={e => props.setColor(index)}
 							key={`${rowIndex}-${colIndex}`}
 							background={Colors[matrix[rowIndex][colIndex]]}
+              current={Colors[props.currentColor] === color}
 						/>
 					)
 				})
